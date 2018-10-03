@@ -1,0 +1,20 @@
+<div class="menu-bar" [style.width]="menuWidth">
+  <div *ngFor="let item of menuObj">
+    <ng-container *ngIf="!item.invisible">
+      <div class="menu-container" [ngClass]="item.id.split('-').length > 1 ? 'child-elem' : 'main-elem'" [style.background-color]="item.id.split('-').length > 1 ? color.childElement : color.mainElement">
+        <span class="menu-icon" [style.margin-right]="(item.id.split('-').length-1) * subMenuMargin + 'px'" (click)="showMenu(item)">
+          <i class="material-icons">{{item.id.split('-').length === 1 ? item.icon : item.selected ? 'radio_button_checked' : 'radio_button_unchecked'}}</i>
+        </span>
+        <span class="menu-name" (click)="showMenu(item)">{{item.name}}</span>
+        <span class="menu-expanded" (click)="showMenu(item)">
+          <i class="material-icons" *ngIf="!item.expanded && item.children && item.children.length">chevron_left</i>
+          <i class="material-icons" *ngIf="item.expanded && item.children && item.children.length">expand_more</i>
+        </span>
+      </div>
+      <ng-container *ngIf="item.children && item.children.length">
+        <app-menu-bar [menuObj]="item.children">
+        </app-menu-bar>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

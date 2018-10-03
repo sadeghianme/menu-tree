@@ -1,0 +1,29 @@
+.menu-bar {
+  background-color: bisque;
+}
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-icon {
+  width: 30px;
+  height: 30px;
+}
+.menu-name {
+  width: calc(100% - 70px);
+  display: flex;
+  align-items: center;
+}
+.menu-expanded {
+  width: 20px;
+  height: 20px;
+}
+.main-elem {
+  height: 45px;
+  color: aliceblue;
+}
+.child-elem {
+  height: 30px;
+  color: black;
+}
