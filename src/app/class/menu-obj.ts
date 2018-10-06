@@ -69,10 +69,10 @@ export const MenuBarObj: any = {
         {name: 'مدیریت سامانه ها', icon: 'call', id: '6-2', link: 'user/systemManagement', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1']}]},
         {name: 'انواع پروژه ها', icon: 'call', id: '6-3', link: 'call/callGroupType', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1', '256', '512', '1024', '2048', '4096']}]},
         {name: 'مدیریت پروژه ها', icon: 'call', id: '6-4', link: 'call/callProjectManagement', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1', '256', '512', '1024', '2048', '4096']}], children: [
-            {name: 'انواع گروه ها', icon: 'filter_list', id: '6-4-1', link: 'user/groupTypes', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1']}]},
-            {name: 'مدیریت سامانه ها', icon: 'call', id: '6-4-2', link: 'user/systemManagement', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1']}]},
-            {name: 'انواع پروژه ها', icon: 'call', id: '6-4-3', link: 'call/callGroupType', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1', '256', '512', '1024', '2048', '4096']}]},
-            {name: 'مدیریت پروژه ها', icon: 'call', id: '6-4-4', link: 'call/callProjectManagement', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1', '256', '512', '1024', '2048', '4096']}]},
+            {name: 'انواع گروه ها1', icon: 'filter_list', id: '6-4-1', link: 'user/groupTypes', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1']}]},
+            {name: 'مدیریت سامانه ها1', icon: 'call', id: '6-4-2', link: 'user/systemManagement', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1']}]},
+            {name: 'انواع پروژه ها1', icon: 'call', id: '6-4-3', link: 'call/callGroupType', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1', '256', '512', '1024', '2048', '4096']}]},
+            {name: 'مدیریت پروژه ها1', icon: 'call', id: '6-4-4', link: 'call/callProjectManagement', tooltip: '', accessCondition: [{role: 'admin', groupId: ['1', '256', '512', '1024', '2048', '4096']}]},
           ]},
       ]
     },

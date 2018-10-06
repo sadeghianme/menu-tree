@@ -7,20 +7,28 @@ import {MenuControlService} from '../servises/menu-control.service';
   styleUrls: ['./menu-bar.component.css']
 })
 export class MenuBarComponent implements OnInit {
- @Input() menuObj = MenuBarObj.menu;
+
+  accesses = {
+    role: [],
+    groupId: '256'
+  };
+
+  @Input() menuObj = MenuBarObj.menu;
  @Input() color = {childElement: '#ffc829', mainElement: '#1b2033'};
  @Input() menuWidth = '250px';
  @Input() subMenuMargin = 15;
+
   constructor(
     private menuControl: MenuControlService
   ) { }
 
   ngOnInit() {
+    this.menuControl.authorizationMenu(this.menuObj, this.accesses);
   }
 
   showMenu(menuItem) {
-    this.menuControl.selectMenu(menuItem);
     console.log('menuItem', menuItem);
+    this.menuControl.initiateState(this.menuObj, menuItem);
   }
 
 }
