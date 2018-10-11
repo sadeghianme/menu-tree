@@ -8,7 +8,7 @@
         <span *ngIf="item.hasOwnProperty('noChild') && item.noChild"> زیرمجموعه ای یافت نشد</span>
       </span>
       <ng-container *ngIf="item.hasOwnProperty('children') && item.children.length">
-        <app-list [mainList]="item.children" [level]="level" [marginRight]="level >= 1 ? (level*childMargin).toString()+'px' : '1px'" [levelsSettings]="levelsSettings"></app-list>
+        <app-tree [mainList]="item.children" [level]="level" [marginRight]="level >= 1 ? (level*childMargin).toString()+'px' : '1px'" [levelsSettings]="levelsSettings"></app-tree>
       </ng-container>
     </span>
   </div>
