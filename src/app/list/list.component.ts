@@ -149,6 +149,4 @@ export class ListComponent implements OnInit {
     //     console.log(item.children, 'item.children from main*************');
     //   });
   }
-
-
 }
