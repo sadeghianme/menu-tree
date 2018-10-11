@@ -3,11 +3,11 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 
 declare const $: any;
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'app-tree',
+  templateUrl: './tree.component.html',
+  styleUrls: ['./tree.component.css']
 })
-export class ListComponent implements OnInit {
+export class TreeComponent implements OnInit {
   childList: any = [];
   @Input() level = 0;
   @Input() childMargin = 20;
@@ -50,17 +50,17 @@ export class ListComponent implements OnInit {
   }
 
   getMainFromApi() {
-    // TODO get main list from api
+    // TODO get main tree from api
     // const req: any = this.api.getInfo()[this.levelsSettings[this.level - 1].mainApiPath[0]][this.levelsSettings[this.level - 1].mainApiPath[1]];
     // req.body = this.levelsSettings[this.level - 1].mainApiBody;
     // this.api.callApi(req)
     //   .subscribe((res: any) => {
-    //     if (res && res.list && res.list.length && !res.list[0].hasOwnProperty('text') && res.list[0].hasOwnProperty('name')) {
-    //       res.list.map(elm => {
+    //     if (res && res.tree && res.tree.length && !res.tree[0].hasOwnProperty('text') && res.tree[0].hasOwnProperty('name')) {
+    //       res.tree.map(elm => {
     //         elm.text = elm.name;
     //         elm.value = elm.idString;
     //       });
-    //       this.mainList = res.list;
+    //       this.mainList = res.tree;
     //     } else {
     //       this.mainList = res;
     //     }
@@ -124,7 +124,7 @@ export class ListComponent implements OnInit {
   }
 
   getChildFromApi(item) {
-    // TODO get main list from api
+    // TODO get main tree from api
     // const req = this.api.getInfo()[this.levelsSettings[this.level - 1].childApiPath[0]][this.levelsSettings[this.level - 1].childApiPath[1]];
     // req.body = this.levelsSettings[this.level - 1].childApiBody;
     // if (req.body && req.body.hasOwnProperty('searchInfo')) {
@@ -134,12 +134,12 @@ export class ListComponent implements OnInit {
     // }
     // this.api.callApi(req)
     //   .subscribe((res: any) => {
-    //     if (res && res.list && res.list.length && !res.list[0].hasOwnProperty('text') && res.list[0].hasOwnProperty('name')) {
-    //       res.list.map(elm => {
+    //     if (res && res.tree && res.tree.length && !res.tree[0].hasOwnProperty('text') && res.tree[0].hasOwnProperty('name')) {
+    //       res.tree.map(elm => {
     //         elm.text = elm.name;
     //         elm.value = elm.idString;
     //       });
-    //       item.children = res.list;
+    //       item.children = res.tree;
     //     } else {
     //       item.children = res;
     //     }
