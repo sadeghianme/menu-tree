@@ -1,0 +1,15 @@
+<div>
+  <div class="main-list" *ngFor="let item of mainList">
+    <span  class="main-list-row">
+      <span (click)="loadChild(item)" [ngClass]="level <= levelsSettings.length ? 'mian-list-item' : 'mian-list-item-no-expand'" [style.margin-right]="marginRight">
+        {{item.text}}
+        <i *ngIf="(!item.hasOwnProperty('children') || !item.children.length) && level <= levelsSettings.length"  class="material-icons" style="color: #6b7573">arrow_left</i>
+        <i *ngIf="item.hasOwnProperty('children') && item.children.length && level <= levelsSettings.length" class="material-icons " style="color: #6b7573">arrow_drop_down</i>
+        <span *ngIf="item.hasOwnProperty('noChild') && item.noChild"> زیرمجموعه ای یافت نشد</span>
+      </span>
+      <ng-container *ngIf="item.hasOwnProperty('children') && item.children.length">
+        <app-list [mainList]="item.children" [level]="level" [marginRight]="level >= 1 ? (level*childMargin).toString()+'px' : '1px'" [levelsSettings]="levelsSettings"></app-list>
+      </ng-container>
+    </span>
+  </div>
+</div>

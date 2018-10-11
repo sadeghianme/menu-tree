@@ -1,0 +1,24 @@
+.main-list {
+  min-height: 30px;
+}
+.main-list:nth-child(odd) {
+  background-color: rgba(243, 243, 243, 0.86);
+}
+.main-list-row {
+  height: 20px;
+}
+.mian-list-item {
+  align-items: center;
+  display: flex;
+  height: 30px;
+}
+.mian-list-item-no-expand {
+  align-items: center;
+  display: flex;
+  height: 30px;
+}
+.mian-list-item:hover {
+  color: cornflowerblue;
+  border-bottom: black;
+  cursor: pointer;
+}

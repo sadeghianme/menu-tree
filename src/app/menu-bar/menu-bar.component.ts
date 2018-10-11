@@ -9,8 +9,8 @@ import {MenuControlService} from '../servises/menu-control.service';
 export class MenuBarComponent implements OnInit {
 
   accesses = {
-    role: [],
-    groupId: '256'
+    role: ['admin'],
+    groupId: '1'
   };
 
   @Input() menuObj = MenuBarObj.menu;
